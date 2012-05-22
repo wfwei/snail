@@ -1,0 +1,6 @@
+DEBUG main Log4jTest - Debug info.
+ INFO main Log4jTest - Info info
+ WARN main Log4jTest - Warn info
+ ERROR main Log4jTest - Error info
+ FATAL main Log4jTest - Fatal info
+ 
