@@ -2,4 +2,8 @@ INFO main log.Log4jTest - Info info
  WARN main log.Log4jTest - Warn info
  ERROR main log.Log4jTest - Error info
  FATAL main log.Log4jTest - Fatal info
+ INFO main log.Log4jTest - Info info
+ WARN main log.Log4jTest - Warn info
+ ERROR main log.Log4jTest - Error info
+ FATAL main log.Log4jTest - Fatal info
  
