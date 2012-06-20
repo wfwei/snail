@@ -4,7 +4,7 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 public class Log4jTest {
-	public static Logger logger = Logger.getLogger("Log4jTest");// Logger.getRootLogger();
+	public static Logger logger = Logger.getLogger(Log4jTest.class);//Logger.getLogger("Log4jTest1");// Logger.getRootLogger();
 	public static Logger logger2 = Logger.getLogger(Log4jTest2.class);
 
 	public void log() {
