@@ -1,6 +1,6 @@
-DEBUG main Log4jTest - Debug info.
- INFO main Log4jTest - Info info
- WARN main Log4jTest - Warn info
- ERROR main Log4jTest - Error info
- FATAL main Log4jTest - Fatal info
+DEBUG main log111.Log4jTest - Debug info.
+ INFO main log111.Log4jTest - Info info
+ WARN main log111.Log4jTest - Warn info
+ ERROR main log111.Log4jTest - Error info
+ FATAL main log111.Log4jTest - Fatal info
  
