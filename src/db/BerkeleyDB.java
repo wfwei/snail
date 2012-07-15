@@ -11,12 +11,12 @@ import com.sleepycat.je.EnvironmentConfig;
 import com.sleepycat.je.LockMode;
 import com.sleepycat.je.OperationStatus;
 
-public class MyBerkeleyDB {
+public class BerkeleyDB {
 
 	private Environment env;
 	private Database db;
 
-	public MyBerkeleyDB() {
+	public BerkeleyDB() {
 
 	}
 
@@ -115,7 +115,7 @@ public class MyBerkeleyDB {
 
 
 	public static void main(String[] args) throws Exception {
-		MyBerkeleyDB mbdb = new MyBerkeleyDB();
+		BerkeleyDB mbdb = new BerkeleyDB();
 		mbdb.setUp("/home/wangfengwei/tmp/bdb/", 1000000);
 		mbdb.open("myDB");
 		
