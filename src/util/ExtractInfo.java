@@ -40,12 +40,11 @@ public class ExtractInfo {
 				sb.append(tempString);
 			}
 			br.close();
-			String regex = "测试过程：(.*?)测试说明：";
+			String regex = "预期结果：(.*?)测试说明：";
 			Pattern pat = Pattern.compile(regex);
 			Matcher mat = pat.matcher(sb.toString());
 			Connection con = MySqlDB.getCon();
 			stmt = con.createStatement();
-			int count = 0;
 			String query = "select * from rule  where check_method!='null'";
 			ResultSet rs = stmt.executeQuery(query);
 			ArrayList<Integer> ruleIds = new ArrayList<Integer>();
@@ -55,14 +54,13 @@ public class ExtractInfo {
 			System.out.println(ruleIds.size());
 			for (int idx = 0; mat.find(); idx++) {
 				tempString = mat.group(1);
-				query = "update rule set check_method = '" + tempString
+				query = "update rule set expected_result = '" + tempString
 						+ "' where id=" + ruleIds.get(idx);
 				System.out.println(idx + "\t" + query);
 				stmt.executeUpdate(query);
 			}
 			stmt.close();
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

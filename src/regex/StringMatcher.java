@@ -44,5 +44,15 @@ public class StringMatcher {
 		return s.matches("[^0-9]*[12]?[0-9]{1,2}[^0-9]*");
 	}
 	
+	// Returns true if the string contains time
+	public boolean isContainTime(String s){
+		return s.matches(".*([0-9]{2,4})(-|年)([0-9]{1,2})(-|月)([0-9]{1,2})(日)?\\s*([0-9]{2}:[0-9]{2})?");
+	}
+	
+	// returns true if the string is ip address
+	public boolean isIPAddress(String s){
+		return s.matches("((25[0-5]|2[0-4]\\d|[01]?\\d\\d?)\\.){3}(25[0-5]|2[0-4]\\d|[01]?\\d\\d?)");
+	}
+	
 }
 

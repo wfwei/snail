@@ -8,7 +8,6 @@ import static org.junit.Assert.assertTrue;
 public class EitherOrCheck {
 	/**
 	 * @author WangFengwei
-	 * TODO this is a todo
 	 */
 	@Test
 	public void testSimpleTrue() {

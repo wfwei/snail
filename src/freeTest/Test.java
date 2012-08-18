@@ -8,6 +8,9 @@ public class Test {
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
 		System.out.println("TEST".getBytes().length);
+		String href = "af;";
+		href = href.substring(0, href.length());
+		System.out.println(href);
 	}
 
 }
