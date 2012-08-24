@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.StringReader;
 
-public class Stream2String {
+public class StreamUtil {
 
 	public static void StreamToString() throws Exception {
 		// 方法一：通过制定stream的输出目的地

@@ -1,4 +1,4 @@
-package initial.order;
+package mine.learn.initorder;
 
 /**
  * @src http://lgh3292.iteye.com/blog/368805

@@ -1,4 +1,4 @@
-package db;
+package mine.acc.db;
 
 import java.io.File;
 

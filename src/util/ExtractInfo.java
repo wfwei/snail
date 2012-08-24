@@ -13,7 +13,8 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import db.MySqlDB;
+import mine.acc.db.MySqlDB;
+
 
 public class ExtractInfo {
 

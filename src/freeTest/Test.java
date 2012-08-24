@@ -7,10 +7,11 @@ import java.util.regex.Pattern;
 public class Test {
 
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		System.out.println("TEST".getBytes().length);
-		String href = "af;";
-		href = href.substring(0, href.length());
-		System.out.println(href);
+		String ns1 = null;
+		String ns2 = "";
+		System.out.println(ns1 == null);
+		System.out.println(ns2 == null);
+		
 	}
 
 }

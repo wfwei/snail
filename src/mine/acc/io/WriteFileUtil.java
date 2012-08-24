@@ -1,11 +1,12 @@
-package io.file;
+package mine.acc.io;
 
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public class AppendToFile {
+
+public class WriteFileUtil {
     /**
      * A方法追加文件：使用RandomAccessFile
      */
@@ -38,18 +39,5 @@ public class AppendToFile {
         }
     }
 
-    public static void main(String[] args) {
-        String fileName = "C:/temp/newTemp.txt";
-        String content = "new append!";
-        //按方法A追加文件
-        AppendToFile.appendMethodA(fileName, content);
-        AppendToFile.appendMethodA(fileName, "append end. \n");
-        //显示文件内容
-        ReadFromFile.readFileByLines(fileName);
-        //按方法B追加文件
-        AppendToFile.appendMethodB(fileName, content);
-        AppendToFile.appendMethodB(fileName, "append end. \n");
-        //显示文件内容
-        ReadFromFile.readFileByLines(fileName);
-    }
+    
 }
