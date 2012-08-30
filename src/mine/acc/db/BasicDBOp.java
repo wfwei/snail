@@ -7,40 +7,42 @@ import java.util.Date;
 import org.apache.log4j.Logger;
 
 /**
- * 一些常用的数据库操作
+ * 常用的数据库操作
  * 
  * @author WangFengwei
  * 
  */
 public class BasicDBOp {
 	private static Connection con = MySqlDB.getCon();
-	private static Logger logger = Logger.getLogger(BasicDBOp.class);
+	private static final Logger LOGGER = Logger.getLogger(BasicDBOp.class);
 
 	/**
-	 * 插入一条rss item，数据库中link属性定义了唯一性索引，索引没有去重
+	 * 插入rss item，数据库中link属性定义了唯一索引，索引没有去排查冲突
 	 * 
 	 * @author WangFengwei
 	 */
-	public static void insertOp(int id, String content, Date date) {
-		String sql = "insert into test(title, pubDate, status) values (?, ?, ?)";
+	public static void insertOp(final int rssId, final String content,
+			final Date date) {
+		final String sql = "insert into test(title, pubDate, status) values (?, ?, ?)";
 		try {
-			java.sql.PreparedStatement pStmt = con.prepareStatement(sql);
-			pStmt.setInt(1, id);
+			final java.sql.PreparedStatement pStmt = con.prepareStatement(sql);
+			pStmt.setInt(1, rssId);
 			pStmt.setString(2, rmInvalidChar(content));
-			// MARK mysql存储日期时间类型，java.sql.Date只有日期！！！
+			// MARK mysql存储日期时间类型，java.sql.Date只有日期！！
 			pStmt.setString(3, new java.text.SimpleDateFormat(
 					"yyyy-MM-dd HH:mm:ss").format(date));
 			pStmt.executeUpdate();
 			pStmt.close();
 		} catch (SQLException e) {
-			logger.warn("insert rss item error:\t" + e.toString());
+			LOGGER.warn("insert rss item error:\t" + e.toString());
 		}
 	}
 
-	private static String rmInvalidChar(String input) {
-		if (input == null) {
-			return null;
+	private static String rmInvalidChar(final String input) {
+		String output = null;
+		if (input != null) {
+			output = input.trim().replaceAll("'", "\'");
 		}
-		return input.trim().replaceAll("'", "’");
+		return output;
 	}
 }

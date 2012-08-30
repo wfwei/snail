@@ -1,17 +1,15 @@
 package freeTest;
 
-import java.io.UnsupportedEncodingException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 public class Test {
+	int a = 0;
+	int b = 0;
 
-	public static void main(String[] args) throws UnsupportedEncodingException {
-		String ns1 = null;
-		String ns2 = "";
-		System.out.println(ns1 == null);
-		System.out.println(ns2 == null);
-		
+	public static void main(String[] args) throws Exception {
+		final Test t = new Test();
+		t.a = 1;
+		t.b = 2;
+		System.out.println(t.a);
+		System.out.println(t.b);
 	}
 
 }
