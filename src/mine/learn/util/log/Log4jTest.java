@@ -1,11 +1,11 @@
-package log;
+package mine.learn.util.log;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 public class Log4jTest {
-	public static Logger logger = Logger.getLogger(Log4jTest.class);//Logger.getLogger("Log4jTest1");// Logger.getRootLogger();
-	public static Logger logger2 = Logger.getLogger(Log4jTest2.class);
+	public static Logger logger = Logger.getLogger(Log4jTest.class);// Logger.getLogger("Log4jTest1");//
+																	// Logger.getRootLogger();
 
 	public void log() {
 		logger.debug("Debug info.");
@@ -16,8 +16,7 @@ public class Log4jTest {
 	}
 
 	public static void main(String[] args) {
-		PropertyConfigurator.configure("src/log4j.properties");
+		PropertyConfigurator.configure("resources/log4j.properties");
 		new Log4jTest().log();
-		//new Log4jTest2().log();
 	}
 }

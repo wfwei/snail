@@ -1,7 +1,6 @@
 package mine.learn.initorder;
 
 /**
- * @src http://lgh3292.iteye.com/blog/368805
  * 
  * 初始化顺序是：
  * 
@@ -16,10 +15,11 @@ package mine.learn.initorder;
  * （5）子类的实例变量、初始化快
  * 
  * （6）子类构造方法
+ * 
+ * @src http://lgh3292.iteye.com/blog/368805
  */
-/**
- * 类A
- * **/
+
+/** 类A **/
 class TestA {
 	public TestA(String a) {
 		System.out.println(a);

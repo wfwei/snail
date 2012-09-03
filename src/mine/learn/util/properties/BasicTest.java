@@ -1,4 +1,4 @@
-package properties;
+package mine.learn.util.properties;
 
 import java.io.FileInputStream;
 import java.io.IOException;

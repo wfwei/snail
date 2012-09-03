@@ -1,4 +1,4 @@
-package freeTest;
+package mine.free.test;
 
 public class Test {
 	int a = 0;

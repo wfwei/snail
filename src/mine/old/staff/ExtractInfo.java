@@ -1,13 +1,10 @@
-package util;
+package mine.old.staff;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -15,7 +12,12 @@ import java.util.regex.Pattern;
 
 import mine.acc.db.MySqlDB;
 
-
+/**
+ * 本类是用来提取无障碍行标的相关内容的
+ * 
+ * @author WangFengwei
+ * @time 2012-8-3
+ */
 public class ExtractInfo {
 
 	/**

@@ -10,7 +10,7 @@ public class RegexDemo {
  
     public static void main(String[] args) {
         Pattern p = Pattern.compile(REGEX);
-        Matcher m = p.matcher(INPUT);   // ���ƥ��������
+        Matcher m = p.matcher(INPUT);   
         StringBuffer sb = new StringBuffer();
         while(m.find()){
             m.appendReplacement(sb, REPLACE);
