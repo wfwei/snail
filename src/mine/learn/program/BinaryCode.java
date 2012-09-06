@@ -1,12 +1,12 @@
 package mine.learn.program;
-
+/**
+ * 加密解密，from topcoder
+ * 
+ * @author WangFengwei
+ * @time 2012-9-2
+ */
 class BinaryCode {
 
-	/**
-	 * 
-	 * @param message
-	 * @return
-	 */
 	public String[] decode(String message) {
 		String[] res = new String[2];
 		int len = message.length();
